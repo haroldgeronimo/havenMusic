@@ -26,13 +26,15 @@
     </div>
 
     @include('inc.modal')
+    @include('inc.deletemodal')
     </div>
 </body>
 
 
+<script src="/js/app.js"></script>
 
-<script src="js/app.js"></script>
 
+@include('inc.messages')
     
     <script>       
             $( function() {
@@ -50,5 +52,19 @@
             } );
 
     </script>
-    
+
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
+    <script>
+            $('#form_delete').on('click', function(e){
+                e.preventDefault();
+                var $form=$(this);
+                $('#confirm').modal({ backdrop: 'static', keyboard: false })
+                    .on('click', '#delete-btn', function(){
+                        $form.submit();
+                    });
+            });
+    </script>
 </html>

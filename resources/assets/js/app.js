@@ -32,6 +32,9 @@ require('./plugin/chart-circle/circles.min');
 
 require('./ready');
 require('./demo');
+
+require('./methods/modal');
+
 window.Vue = require('vue');
 
 /**
@@ -45,3 +48,8 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+
+//user methods
+import NotifHandler from './methods/notif';
+global.NotificationHandler = NotifHandler;

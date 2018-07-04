@@ -39,16 +39,15 @@
                 </div>
                     <ul class="nav">
                         <li class="nav-item active">
-                            <a href="index.html">
+                            <a href="/">
                                 <i class="la la-dashboard"></i>
                                 <p>Dashboard</p>
-                                <span class="badge badge-count">5</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="components.html">
-                                <i class="la la-table"></i>
-                                <p>Components</p>
+                            <a href="/songs">
+                                <i class="la la-music"></i>
+                                <p>Songs</p>
                                 <span class="badge badge-count">14</span>
                             </a>
                         </li>

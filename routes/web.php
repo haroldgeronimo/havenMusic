@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'PagesController@index');
+
+
+Route::resource('songs', 'SongsController');
