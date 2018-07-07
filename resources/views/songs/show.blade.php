@@ -17,6 +17,17 @@
             <div class="card-body">
                 <div class="row">
                     <div class="container">
+                            @if(count($song->composers)>0)
+                            <small>Songwritter(s):</small>
+                      @foreach($song->composers as $composer)
+                      <div class="badge badge-primary">
+                        {{$composer->firstName." ".$composer->lastName}}
+                      </div>
+                         @endforeach
+                 
+                        @else
+                        <small><i>No tags</i></small>
+                        @endif
                             <div class="card">
                                 <div class="card-header">
                                     <h1 class="card-title">Lyrics</h1>
@@ -29,6 +40,19 @@
                     </div>
                 </div>
             </div>
+            <div class="card-footer">
+            @if(count($song->tags())>0)
+                <small>Tags:</small>
+          @foreach($song->tags() as $tag)
+          <div class="badge badge-default">
+            {{$tag}}
+          </div>
+             @endforeach
+     
+            @else
+            <small><i>No tags</i></small>
+            @endif
+        </div>
         </div>
     </div>
 </div>

@@ -31,40 +31,8 @@
 </body>
 
 
-<script src="/js/app.js"></script>
 
-
+@include('inc.scripts')
 @include('inc.messages')
     
-    <script>       
-            $( function() {
-                $( "#slider" ).slider({
-                    range: "min",
-                    max: 100,
-                    value: 40,
-                });
-                $( "#slider-range" ).slider({
-                    range: true,
-                    min: 0,
-                    max: 500,
-                    values: [ 75, 300 ]
-                });
-            } );
-
-    </script>
-
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-    </script>
-    <script>
-            $('#form_delete').on('click', function(e){
-                e.preventDefault();
-                var $form=$(this);
-                $('#confirm').modal({ backdrop: 'static', keyboard: false })
-                    .on('click', '#delete-btn', function(){
-                        $form.submit();
-                    });
-            });
-    </script>
 </html>

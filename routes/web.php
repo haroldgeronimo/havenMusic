@@ -15,3 +15,4 @@ Route::get('/', 'PagesController@index');
 
 
 Route::resource('songs', 'SongsController');
+Route::resource('persons', 'PersonsController');

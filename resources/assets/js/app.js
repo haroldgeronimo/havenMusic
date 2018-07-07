@@ -21,6 +21,10 @@
  */
 
 require('./bootstrap');
+require('sifter');
+require('microplugin');
+
+
 
 require('./plugin/jquery-ui-1.12.1.custom/jquery-ui.min');
 require('./plugin/chartist/plugin/chartist-plugin-tooltip.min');
@@ -34,8 +38,9 @@ require('./ready');
 require('./demo');
 
 require('./methods/modal');
-
+require('./methods/tag');
 window.Vue = require('vue');
+window.sel = require('selectize/dist/js/standalone/selectize');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -53,3 +58,4 @@ const app = new Vue({
 //user methods
 import NotifHandler from './methods/notif';
 global.NotificationHandler = NotifHandler;
+

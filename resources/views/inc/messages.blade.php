@@ -1,3 +1,4 @@
+
 @if(count($errors)>0)
     @foreach($errors->all() as $error)
     <script>
@@ -5,7 +6,6 @@
             let errorinst = new NotificationHandler();
             errorinst.notifyUserError('{{$error}}','Error!','top','center','','');
         })
-        notifyUserError('{{$error}}','Error!','top','center','','')
     </script>
     @endforeach
 @endif
