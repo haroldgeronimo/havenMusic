@@ -52,7 +52,51 @@
             @else
             <small><i>No tags</i></small>
             @endif
+          </div>
         </div>
+        <div class="card">
+            <div class="card-header">
+                <h3>Arrangments</h3>
+                <a href="/arrangements/create/{{$song->id}}" class="btn btn-primary float-right">Add New Arrangment</a>     
+            </div>
+            <div class="card-body">
+                <div class="row">
+                        <div class="container">
+                                @if(count($song->arrangements)>0)
+                                <table class="table table-hover __web-inspector-hide-shortcut__">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Title</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Arranger(s)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          @foreach($song->arrangements as $arrangement)
+                                         
+                                            <tr> 
+                                                <td><a href="/arrangements/{{$arrangement->id}}">{{$arrangement->description}}</a></td>
+                                                <td><a href="/arrangements/{{$arrangement->id}}">{{$arrangement->type}}</a></td>
+                                                <td>
+                                                   
+                                                </td>
+                                            </tr>
+                       
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                 @else
+                                 <div class="jumbotron jumbotron-fluid">
+                                     <center>
+                                    <h2>No Arrangments Yet</h2>
+                                    
+                                <a href="/arrangements/create/{{$song->id}}" class="btn btn-lg btn-primary">Add New Song</a>
+                                     </center>
+                                 </div>
+                                 @endif                            
+                        </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -18,4 +18,8 @@ class Song extends Model
     public function composers(){
         return $this->belongsToMany('App\Person','persons_songs');
     }
+
+    public function arrangements(){
+        return $this->hasMany('App\Arrangement');
+    }
 }

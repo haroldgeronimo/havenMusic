@@ -16,3 +16,10 @@ Route::get('/', 'PagesController@index');
 
 Route::resource('songs', 'SongsController');
 Route::resource('persons', 'PersonsController');
+
+Route::get('arrangements/create/{id}', [
+    'as' => 'arrangements.create',
+    'uses' => 'ArrangementsController@create'
+]);
+
+Route::resource('arrangements', 'ArrangementsController', ['except' => 'create']);
