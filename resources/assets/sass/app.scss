@@ -11,7 +11,9 @@
 
 //Third Party CSS
 @import "node_modules/selectize/dist/css/selectize.bootstrap3";
+@import "dropzone";
 
 //Custom CSS
 @import "ready";
 @import "demo";
+@import "dropzone.custom";

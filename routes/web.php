@@ -23,3 +23,4 @@ Route::get('arrangements/create/{id}', [
 ]);
 
 Route::resource('arrangements', 'ArrangementsController', ['except' => 'create']);
+Route::resource('files', 'FilesController');

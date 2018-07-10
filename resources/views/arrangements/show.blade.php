@@ -15,7 +15,22 @@
                 <p><small>{{$arrangement->description}}</small><div class="badge badge-lg badge-success">{{$arrangement->type}}</div></p>
             </div>
             <div class="card-body">
-               
+                <div class="container">
+                        @if(count($arrangement->files)>0)
+                                @include('inc.files')
+                         @else
+                         <div class="jumbotron jumbotron-fluid">
+                             <center>
+                            <h2>No Files Yet</h2>
+                            
+                             </center>
+                         </div>
+                         @endif                                
+
+                    <div class="container">
+                  @include('inc.uploader')
+                </div>
+                </div>
             </div>
             
         </div>

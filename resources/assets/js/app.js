@@ -33,14 +33,21 @@ require('./plugin/bootstrap-notify/bootstrap-notify.min');
 require('./plugin/bootstrap-toggle/bootstrap-toggle.min');
 require('./plugin/chart-circle/circles.min');
 require('./plugin/chart-circle/circles.min');
+window.Dropzone = require('./plugin/dropzone/dropzone');  
+require('./methods/dropzone.config');  
 
+
+
+
+
+require('selectize/dist/js/standalone/selectize.min');
+window.selectize = require('selectize/dist/js/standalone/selectize.min');
 require('./ready');
 require('./demo');
 
 require('./methods/modal');
 require('./methods/tag');
 window.Vue = require('vue');
-window.sel = require('selectize/dist/js/standalone/selectize');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
